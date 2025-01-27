@@ -620,6 +620,10 @@ video {
   left: 1.5rem;
 }
 
+.left-\[560px\] {
+  left: 560px;
+}
+
 .right-1 {
   right: 0.25rem;
 }
@@ -656,34 +660,6 @@ video {
   top: 95px;
 }
 
-.left-1 {
-  left: 0.25rem;
-}
-
-.right-3 {
-  right: 0.75rem;
-}
-
-.left-32 {
-  left: 8rem;
-}
-
-.left-\[250px\] {
-  left: 250px;
-}
-
-.left-\[750px\] {
-  left: 750px;
-}
-
-.left-\[550px\] {
-  left: 550px;
-}
-
-.left-\[560px\] {
-  left: 560px;
-}
-
 .z-40 {
   z-index: 40;
 }
@@ -712,20 +688,24 @@ video {
   margin-left: 1.25rem;
 }
 
-.ml-\[320px\] {
-  margin-left: 320px;
+.ml-\[200px\] {
+  margin-left: 200px;
 }
 
-.ml-\[350px\] {
-  margin-left: 350px;
+.ml-\[320px\] {
+  margin-left: 320px;
 }
 
 .ml-\[360px\] {
   margin-left: 360px;
 }
 
-.ml-\[430px\] {
-  margin-left: 430px;
+.ml-\[400px\] {
+  margin-left: 400px;
+}
+
+.ml-\[470px\] {
+  margin-left: 470px;
 }
 
 .mt-1 {
@@ -742,58 +722,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ml-\[750px\] {
-  margin-left: 750px;
-}
-
-.ml-\[700px\] {
-  margin-left: 700px;
-}
-
-.ml-\[730px\] {
-  margin-left: 730px;
-}
-
-.ml-\[30px\] {
-  margin-left: 30px;
-}
-
-.ml-\[450px\] {
-  margin-left: 450px;
-}
-
-.ml-\[530px\] {
-  margin-left: 530px;
-}
-
-.ml-\[630px\] {
-  margin-left: 630px;
-}
-
-.ml-\[60px\] {
-  margin-left: 60px;
-}
-
-.ml-\[200px\] {
-  margin-left: 200px;
-}
-
-.ml-\[300px\] {
-  margin-left: 300px;
-}
-
-.ml-\[400px\] {
-  margin-left: 400px;
-}
-
-.ml-\[550px\] {
-  margin-left: 550px;
-}
-
-.ml-\[470px\] {
-  margin-left: 470px;
 }
 
 .flex {
@@ -893,14 +821,6 @@ video {
   width: 100vw;
 }
 
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -939,12 +859,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-40 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(10rem * var(--tw-space-x-reverse));
-  margin-left: calc(10rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .rounded-2xl {
