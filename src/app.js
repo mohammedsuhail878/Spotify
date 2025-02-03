@@ -1,3 +1,6 @@
+import { songs } from './modules/data.js';
+import { playSong, pauseSong, loadSong } from './modules/audioPlayer.js';
+
 // Initialize Variables
 let songIndex = 0;
 const audioElement = new Audio('/songs/1.mp3');
@@ -11,12 +14,12 @@ const nextBtn = document.querySelector('.next-btn');
 const previousBtn = document.querySelector('.previous-btn');
 const masterSongName = document.querySelector('.masterSongName');
 
-const songs = [
-  { songName: "Warriyo - Mortals", filePath: "/songs/1.mp3", coverPath: "/cover/1.jpg" },
-  { songName: "Cielo", filePath: "/songs/2.mp3", coverPath: "/cover/2.jpg" },
-  { songName: "DEAF KEV", filePath: "/songs/3.mp3", coverPath: "/cover/3.jpg" },
-  { songName: "Different Haven", filePath: "/songs/4.mp3", coverPath: "/cover/4.jpg" },
-];
+// const songs = [
+//   { songName: "Warriyo - Mortals", filePath: "/songs/1.mp3", coverPath: "/cover/1.jpg" },
+//   { songName: "Cielo", filePath: "/songs/2.mp3", coverPath: "/cover/2.jpg" },
+//   { songName: "DEAF KEV", filePath: "/songs/3.mp3", coverPath: "/cover/3.jpg" },
+//   { songName: "Different Haven", filePath: "/songs/4.mp3", coverPath: "/cover/4.jpg" },
+// ];
 
 // Initialize UI
 songs.forEach((song, i) => {
@@ -25,19 +28,19 @@ songs.forEach((song, i) => {
 });
 
 // Utility Functions
-const playSong = () => {
-  audioElement.play();
-  masterPlay.classList.replace('fa-circle-play', 'fa-circle-pause');
-  gif.style.opacity = 1;
-  masterSongName.innerText = songs[songIndex].songName;
-};
+// const playSong = () => {
+//   audioElement.play();
+//   masterPlay.classList.replace('fa-circle-play', 'fa-circle-pause');
+//   gif.style.opacity = 1;
+//   masterSongName.innerText = songs[songIndex].songName;
+// };
 
-const pauseSong = () => {
-  audioElement.pause();
-  masterPlay.classList.replace('fa-circle-pause', 'fa-circle-play');
-  gif.style.opacity = 0;
-  masterSongName.innerText = "";
-};
+// const pauseSong = () => {
+//   audioElement.pause();
+//   masterPlay.classList.replace('fa-circle-pause', 'fa-circle-play');
+//   gif.style.opacity = 0;
+//   masterSongName.innerText = "";
+// };
 
 const resetPlayIcons = () => {
   songItemPlay.forEach((button) => {
@@ -45,12 +48,12 @@ const resetPlayIcons = () => {
   });
 };
 
-const loadSong = (index) => {
-  songIndex = index;
-  audioElement.src = songs[songIndex].filePath;
-  audioElement.currentTime = 0;
-  playSong();
-};
+// const loadSong = (index) => {
+//   songIndex = index;
+//   audioElement.src = songs[songIndex].filePath;
+//   audioElement.currentTime = 0;
+//   playSong();
+// };
 
 // Event Listeners
 songItemPlay.forEach((button, index) => {
