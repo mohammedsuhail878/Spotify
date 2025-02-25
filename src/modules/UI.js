@@ -1,15 +1,10 @@
 // Handles DOM manipulation
 import { songs, } from "./data.js";
-import { loadSong, playSong, pauseSong } from "./audioPlayer.js"; 
-import { getSongIndex, setSongIndex } from "./appstate.js";
+import { loadSong, pauseSong } from "./audioPlayer.js"; 
+import { getSongIndex } from "./appstate.js";
 
-
-let songIndex = getSongIndex;
 const audioElement = document.querySelector('#audioElement');
-// console.log("Audio Element:", audioElement);
-
 const masterPlay = document.getElementById('masterPlay');
-// console.log("master element: ", masterPlay);
 const myProgressBar = document.getElementById('myProgressBar');
 const gif = document.getElementById('gif');
 const coverPath = document.querySelectorAll('.coverPath');
@@ -31,14 +26,22 @@ const resetPlayIcons = () => {
   };
   
   // Event Listeners
-  
-  
+  songItemPlay.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        resetPlayIcons();
+      if (audioElement.paused || getSongIndex() !== index) {
+        button.classList.replace('fa-circle-play', 'fa-circle-pause');
+        loadSong(index);
+      } else {
+        pauseSong();
+      }
+    });
+  });
+
   masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
-          masterPlay.classList.replace('fa-circle-play', 'fa-circle-pause');
-          playSong();
+        loadSong(getSongIndex());
         }else {
-          masterPlay.classList.replace('fa-circle-pause', 'fa-circle-play');
           pauseSong();
         }
       });
@@ -67,4 +70,4 @@ const resetPlayIcons = () => {
     loadSong(prevIndex);
   });
   
-export { audioElement, songItemPlay, resetPlayIcons, masterSongName, masterPlay, gif }
+export { audioElement, masterSongName, masterPlay, gif }
